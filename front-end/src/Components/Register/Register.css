@@ -1,0 +1,57 @@
+.fullscreen{
+    background-size: cover ;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://res.cloudinary.com/ddyi7re5r/image/upload/v1690135169/background_leykqy.jpg");
+}
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    border-radius: 20px ;
+    background-color: white;
+    border-color: white;
+}
+.center-child{
+    margin: auto;
+    margin-bottom: 5%;
+    width: 90%;
+}
+.login-label{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.label{
+    margin-left: 5%;
+}
+.input{
+    height: 20px;
+    width: 85%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom:10px;
+    padding:10px 0px 10px 5px ;
+    border: 0px;
+    border-bottom: 1px solid;
+}
+.forgot{
+    text-align: right;
+    margin-right:5px;
+}
+.button{
+    width: 85%;
+    margin-left: 5%;
+    margin-top: 5%;
+    padding:10px 0px 10px 5px ;
+    border-bottom: 1px solid;
+    border-radius: 20px;
+    color: white;
+    background-image: url("https://res.cloudinary.com/ddyi7re5r/image/upload/v1690135169/background_leykqy.jpg");
+}
+.sign-up{
+    text-align: center;
+    margin-top:20% ;
+}
