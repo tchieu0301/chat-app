@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace back_end.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class inimigrate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,7 +15,7 @@ namespace back_end.Migrations
                 name: "Accounts",
                 columns: table => new
                 {
-                    accountId = table.Column<int>(type: "integer", nullable: false)
+                    account_id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     username = table.Column<string>(type: "text", nullable: false),
                     password = table.Column<string>(type: "text", nullable: false),
@@ -25,7 +25,7 @@ namespace back_end.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Accounts", x => x.accountId);
+                    table.PrimaryKey("PK_Accounts", x => x.account_id);
                 });
         }
 

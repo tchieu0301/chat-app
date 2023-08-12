@@ -2,10 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using back_end.Entities;
 
-public class ChatApplicationContext : DbContext
+public class ChatApplicationDb : DbContext
 {
     protected readonly IConfiguration _configuration;
-    public ChatApplicationContext(IConfiguration configuration)
+    public ChatApplicationDb(IConfiguration configuration)
     {
         _configuration = configuration;
     }
