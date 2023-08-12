@@ -23,3 +23,15 @@ C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\obj\Debug\net7.0\refint\back-e
 C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\obj\Debug\net7.0\back-end.pdb
 C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\obj\Debug\net7.0\back-end.genruntimeconfig.cache
 C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\obj\Debug\net7.0\ref\back-end.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\bin\Debug\net7.0\Humanizer.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\bin\Debug\net7.0\Npgsql.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\obj\Debug\net7.0\back-end.csproj.AssemblyReference.cache
+C:\Users\gtdbm\Desktop\chat-app\back-end\back-end\obj\Debug\net7.0\back-end.csproj.CopyComplete
