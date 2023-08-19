@@ -11,14 +11,13 @@ namespace back_end.Entities
         public string email { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
-        ICollection<Friend> friends { get; set; } = new List<Friend>();
     }
 
-    public class Friend
+     public class ChatBox
     {
         [Key]
-        public int friend_list_id { get; set;}
-        public Account? account { get; set; }
-        public int friend_id { get; set; }
+        public int chat_box_id { get; set; }
+        public int room { get; set; }
+        public ICollection<Account> accounts { get; set; } = new List<Account>();
     }
 }

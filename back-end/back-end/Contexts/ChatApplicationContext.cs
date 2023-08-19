@@ -14,5 +14,5 @@ public class ChatApplicationDb : DbContext
         optionsBuilder.UseNpgsql(_configuration.GetConnectionString("ChatApplicationCS"));
     }
     public DbSet<Account> Accounts { get; set; }
-    public DbSet<Friend> Friends { get; set; }
+    public DbSet<ChatBox> ChatBoxes { get; set; }
 }

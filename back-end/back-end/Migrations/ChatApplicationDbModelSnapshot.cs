@@ -30,6 +30,9 @@ namespace back_end.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("account_id"));
 
+                    b.Property<int?>("ChatBoxchat_box_id")
+                        .HasColumnType("integer");
+
                     b.Property<string>("email")
                         .IsRequired()
                         .HasColumnType("text");
@@ -52,37 +55,37 @@ namespace back_end.Migrations
 
                     b.HasKey("account_id");
 
+                    b.HasIndex("ChatBoxchat_box_id");
+
                     b.ToTable("Accounts");
                 });
 
-            modelBuilder.Entity("back_end.Entities.Friend", b =>
+            modelBuilder.Entity("back_end.Entities.ChatBox", b =>
                 {
-                    b.Property<int>("friend_list_id")
+                    b.Property<int>("chat_box_id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("friend_list_id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("chat_box_id"));
 
-                    b.Property<int?>("account_id")
+                    b.Property<int>("room")
                         .HasColumnType("integer");
 
-                    b.Property<int>("friend_id")
-                        .HasColumnType("integer");
+                    b.HasKey("chat_box_id");
 
-                    b.HasKey("friend_list_id");
-
-                    b.HasIndex("account_id");
-
-                    b.ToTable("Friends");
+                    b.ToTable("ChatBoxes");
                 });
 
-            modelBuilder.Entity("back_end.Entities.Friend", b =>
+            modelBuilder.Entity("back_end.Entities.Account", b =>
                 {
-                    b.HasOne("back_end.Entities.Account", "account")
-                        .WithMany()
-                        .HasForeignKey("account_id");
+                    b.HasOne("back_end.Entities.ChatBox", null)
+                        .WithMany("accounts")
+                        .HasForeignKey("ChatBoxchat_box_id");
+                });
 
-                    b.Navigation("account");
+            modelBuilder.Entity("back_end.Entities.ChatBox", b =>
+                {
+                    b.Navigation("accounts");
                 });
 #pragma warning restore 612, 618
         }
