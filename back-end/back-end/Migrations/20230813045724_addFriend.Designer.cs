@@ -11,8 +11,8 @@ using back_end.Contexts;
 namespace back_end.Migrations
 {
     [DbContext(typeof(ChatApplicationDb))]
-    [Migration("20230812175241_ini-migrate")]
-    partial class inimigrate
+    [Migration("20230813045724_addFriend")]
+    partial class addFriend
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,6 +55,38 @@ namespace back_end.Migrations
                     b.HasKey("account_id");
 
                     b.ToTable("Accounts");
+                });
+
+            modelBuilder.Entity("back_end.Entities.Friend", b =>
+                {
+                    b.Property<int>("friend_list_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("friend_list_id"));
+
+                    b.Property<int>("account_id")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("friend_id")
+                        .HasColumnType("integer");
+
+                    b.HasKey("friend_list_id");
+
+                    b.HasIndex("account_id");
+
+                    b.ToTable("Friends");
+                });
+
+            modelBuilder.Entity("back_end.Entities.Friend", b =>
+                {
+                    b.HasOne("back_end.Entities.Account", "account")
+                        .WithMany()
+                        .HasForeignKey("account_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("account");
                 });
 #pragma warning restore 612, 618
         }

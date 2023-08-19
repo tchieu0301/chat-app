@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using back_end.Contexts;
@@ -11,9 +12,11 @@ using back_end.Contexts;
 namespace back_end.Migrations
 {
     [DbContext(typeof(ChatApplicationDb))]
-    partial class ChatApplicationDbModelSnapshot : ModelSnapshot
+    [Migration("20230813051029_addFriend2")]
+    partial class addFriend2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace back_end.Migrations
 {
     /// <inheritdoc />
-    public partial class inimigrate : Migration
+    public partial class addFriend8 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

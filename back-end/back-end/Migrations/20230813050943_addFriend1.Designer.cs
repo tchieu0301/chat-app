@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using back_end.Contexts;
@@ -11,9 +12,11 @@ using back_end.Contexts;
 namespace back_end.Migrations
 {
     [DbContext(typeof(ChatApplicationDb))]
-    partial class ChatApplicationDbModelSnapshot : ModelSnapshot
+    [Migration("20230813050943_addFriend1")]
+    partial class addFriend1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -66,12 +69,15 @@ namespace back_end.Migrations
                     b.Property<int?>("account_id")
                         .HasColumnType("integer");
 
+                    b.Property<int?>("account_id1")
+                        .HasColumnType("integer");
+
                     b.Property<int>("friend_id")
                         .HasColumnType("integer");
 
                     b.HasKey("friend_list_id");
 
-                    b.HasIndex("account_id");
+                    b.HasIndex("account_id1");
 
                     b.ToTable("Friends");
                 });
@@ -80,7 +86,7 @@ namespace back_end.Migrations
                 {
                     b.HasOne("back_end.Entities.Account", "account")
                         .WithMany()
-                        .HasForeignKey("account_id");
+                        .HasForeignKey("account_id1");
 
                     b.Navigation("account");
                 });
