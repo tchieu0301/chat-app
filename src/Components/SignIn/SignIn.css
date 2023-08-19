@@ -1,0 +1,12 @@
+.background{
+    background-image: url("D:\chat-app\public\bgimg.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
