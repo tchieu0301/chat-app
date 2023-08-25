@@ -4,8 +4,19 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ChatApplicationDb>();
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.WithOrigins("*")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+        });
+});
 
 var app = builder.Build();
+app.UseCors();
 var accountEndpoint = app.MapGroup("/account");
 var friendEndpoint = app.MapGroup("/friend");
 
